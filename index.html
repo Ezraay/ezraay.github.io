@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <div id="content" class="d-flex flex-column align-items-center">
+      <hr />
+      <h1>Is Climate Change Real?</h1>
+      <h3>Valeriy Djulai - 32476647</h3>
+      <h4>FIT 3179 Assignment 2</h4>
+      <p class="col-6">For my visualisation I wanted to explore the implications of relevant datasets and whether or not they are a sign of sign of climate change in general.
+        I wanted to explore whether or not the Earth is changing, how it is changing, and whether or not we are putting in ample effort to combat climate change.
+      </p>
+      <hr />
+
+      <h2>Change in Sea Level Over Time</h2>
+      <div class="row align-items-center justify-content-center">
+        <div class="col-5">
+          <p>
+            The table on the right shows the samples of the
+            <a
+              href="https://www.kaggle.com/datasets/kkhandekar/global-sea-level-1993-2021"
+              class="purple"
+              >Global Mean Sea Level</a
+            >
+            from 1993 to 2021. It is gathered from a dataset that has various
+            measures throughout the year, which is visualised by the point
+            spread. As a comparison, included is also the
+            <a href="https://datahub.io/core/population#data" class="orange"
+              >World Population</a
+            >, to show the comparison that overpopulation might have on the
+            acceleration of climate change.
+          </p>
+        </div>
+        <div class="col-7">
+          <div id="seaLevelChart"></div>
+        </div>
+      </div>
+      <hr />
+
+      <h2>Power Generation Methods in 2021-2022</h2>
+      <div class="row align-items-center justify-content-center">
+        <div class="col-4">
+          <div id="powerMethodChart" style="float: right"></div>
+        </div>
+        <div class="col-4">
+          <p>
+            <!--  href="https://www.iea.org/data-and-statistics/data-product/greenhouse-gas-emissions-from-energy-highlights#highlights" -->
+            The table on the left shows
+            <a
+              href="https://www.energy.gov.au/publications/australian-energy-update-2023"
+              >Power Generation Methods</a
+            >
+            in a pie chart. This data is relevant to the year 2021-2022. It
+            shows that despite recent efforts, renewable forms of energy still
+            make up a very small percentage of power generation in Australia.
+          </p>
+        </div>
+      </div>
+      <hr />
+
+      <h2>Sea Level in 2018</h2>
+      <div class="row align-items-center justify-content-center">
+        <div class="col-6">
+          <p>
+            The table below shows the change in country temperature over time. It
+            is gathered from a
+            <a
+              href="https://www.kaggle.com/datasets/subhamjain/temperature-of-all-countries-19952020/"
+              >dataset</a
+            >
+            that shows measurements in major cities around. The data was converted to Celsius and averaged across the years.
+          </p>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-auto">
+          <div id="tempMapChart" class="float-right"></div>
+        </div>
+      </div>
+      <hr />
+      <div class="col-6">
+        <p>Based on the previously shown infographics, it is clear that due to rising sea levels and general increase
+          in temperature of countries around the world, the decline of polar ice caps and slow decline of fossil fuel usage,
+          climate change can be considered a real and serious issue, one that must be addressed for the sake of
+          our future generations.
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

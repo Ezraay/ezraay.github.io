@@ -1,0 +1,79 @@
+$titleColour: #3498db;
+$paragraphColour: #2c3e50;
+$backgroundColour: white;
+$backgroundBorderColour: #ecf0f1;
+
+$purple: #9b59b6;
+$orange: #e67e22;
+
+
+
+* {
+    // font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+html {
+    // height: 100%;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 60px;
+    color: $titleColour;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+p {
+    color: $paragraphColour;
+    font-size: 18px;
+}
+
+hr {
+    width: 100%;
+}
+
+body {
+    background-color: $backgroundBorderColour;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#content {
+    flex-grow: 1;
+    margin: 0 20%;
+    padding: 5% 5%;
+    background-color: $backgroundColour;
+    height: 100%;
+
+    #seaLevelChart {
+        padding: 0 !important;
+    }
+}
+
+.purple {
+    color: $purple;
+}
+
+.orange {
+    color: $orange;
+}

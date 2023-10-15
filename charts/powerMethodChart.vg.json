@@ -1,0 +1,24 @@
+{
+    "data": {
+        "url": "data/power_method.csv"
+    },
+    "mark": "arc",
+    "encoding": {
+        "theta": {
+            "field": "Value",
+            "type": "quantitative"
+        },
+        "color": {
+            "field": "Type",
+            "type": "nominal"
+        }, 
+        "tooltip": [
+            {"field": "Value", "type": "nominal", "title": "Value in Petajoules"}
+          ]
+    },
+    "config": {
+        "view": {
+            "stroke": "transparent"
+        }
+    }
+}

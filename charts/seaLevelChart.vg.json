@@ -1,0 +1,25 @@
+{
+  "width": 500,
+  "layer": [
+    {
+      "data": { "name": "SeaLevel", "url": "data/seaLevel.csv" },
+      "mark": { "type": "point", "opacity": 0.3 },
+      "encoding": {
+        "x": { "field": "Year", "type": "nominal" },
+        "y": { "field": "GMSL_noGIA","type": "quantitative", "title": "Global Mean Sea Level"},
+        "size": { "value": 5 },
+        "color": {"value": "#9b59b6"}
+      }
+    }, {
+      "data": { "name": "WorldPopulation", "url": "data/world_population.csv" },
+      "mark": { "type": "line", "opacity": 0.6 },
+      "encoding": {
+        "x": { "field": "Year", "type": "nominal" },
+        "y": { "field": "Population","type": "quantitative" },
+        "size": { "value": 5 },
+        "color": {"value": "#e74c3c"}
+      }
+    }
+  ],
+  "resolve": {"scale": {"y": "independent"}}
+}

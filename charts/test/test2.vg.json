@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "data/world.topo.json",
+    "format": {
+      "type": "topojson",
+      "feature": "counties"
+    }
+  },
+  "transform": [{
+    "lookup": "NAME_EN",
+    "from": {
+      "data": {
+        "url": "data/city_temperature_formatted.tsv"
+      },
+      "key": "City",
+      "fields": ["Temperature"]
+    }
+  }],
+  "projection": {
+    "type": "albersUsa"
+  },
+  "mark": "geoshape",
+  "encoding": {
+    "color": {
+      "field": "rate",
+      "type": "quantitative"
+    }
+  }
+}

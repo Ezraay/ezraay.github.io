@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 700,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Cian2001/irs_datasets/main/world_map.json",
+    "format": {"property": "features"}
+  },
+  "projection": {"type": "mercator"},
+  "transform": [
+    {
+      "lookup": "properties.name",
+      "from": {
+        "key": "Country",
+        "fields": ["Temperature", "Year"],
+        "data": {
+          "url": "data/city_temperature_formatted.tsv",
+          "format": {"type": "tsv"}
+        } 
+      }
+    }
+  ],
+  "mark": {
+    "type": "geoshape",
+    
+    "stroke": "#141010",
+    "strokeWidth": 0.5
+  },
+  "encoding": {
+    "color": {
+      "field": "Temperature",
+      "type": "quantitative",
+      "scale": {"range": ["#3498db", "#e74c3c"]}
+    },
+    "tooltip": [
+      {"field": "properties.name", "title": "Country"},
+      {
+        "field": "Temperature",
+        "type": "quantitative",
+        "title": "Temperature"
+      }
+    ]
+  },
+  "config": {"mark": {"invalid": null}}
+}
